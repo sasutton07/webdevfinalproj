@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster+Two&family=Playfair+Display&family=Satisfy&display=swap" rel="stylesheet">
+<!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- stylesheets -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/breeds.css">
+<!-- favicon -->
+    <link rel="icon" href="images/logoimg.png">
+    <title>Biscuit</title>
+</head>
+
+<body>
+    <header class="clearfix">
+      <!-- makes logo a link to homepage -->
+      <a href="index.html"><img id="logoimg" src="images/logoimg.png"></a>
+        <h2>Biscuit's Possible Breeds</h2>
+    </header>
+    <!-- bootstrap nav bar -->
+    <nav class="navbar navbar-expand-sm bg-light">
+        <div class="container-fluid">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="imagegallery.html">Images</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="likesdislikes.html">Likes/Dislikes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="breeds.html">Breeds</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    <!-- <nav id="nav_list">
+        <ul>
+            <li><a href="#vid1">Harry's House Preview</a></li>
+            <li><a href="#vid2">Treat People With Kindness</a></li>
+            <li><a href="#vid3">Grammy's Performance</a></li>
+            <li><a href="#vid4">Falling - 2020</a></li>
+            <li><a href="#vid5">Kiwi - 2017</a></li>
+        </ul>
+    </nav> 
+    -->
+    <main>
+      <h1>Possible Breed Mixes</h1>
+      <!-- list of each breed and descriiption in own boxes -->
+       <div class="breeds">
+         <div class="breed">
+           <img src="images/jackrussel.jpeg" alt="" class="thumbnail">
+           <h3 class="name">Jack Russel Terrier</h3>
+           <p class="description">Developed in England some 200 years ago to hunt foxes, the Jack Russell Terrier, also known as the Parson Russell Terrier, is a lively, independent, and clever little dog. They’re charming and affectionate, but they’re also a handful to train and manage. For experienced dog parents only! At first, this small, adorable, and affectionate dog may seem like a good choice for new pet parents and apartment dwellers. But you may find yourself surprised at this little pup’s energy and intensity. These dogs need plenty of exercise and firm, consistent training, or else they may act out with unwanted behaviors. That said, if you know how to handle a bit of rowdiness and can keep up with an energetic pup, you’ll be rewarded with a loving and loyal friend for life.</p>
+         </div>
+         <div class="breed">
+           <img src="images/dalmation.jpeg" alt="" class="thumbnail">
+           <h3 class="name">Dalmation</h3>
+           <p class="description">The dignified Dalmatian, dogdom's citizen of the world, is famed for his spotted coat and unique job description. During their long history, these "coach dogs" have accompanied the horse-drawn rigs of nobles, gypsies, and firefighters. The Dalmatian's delightful, eye-catching spots of black or liver adorn one of the most distinctive coats in the animal kingdom. Beneath the spots is a graceful, elegantly proportioned trotting dog standing between 19 and 23 inches at the shoulder. Dals are muscular, built to go the distance; the powerful hindquarters provide the drive behind the smooth, effortless gait. The Dal was originally bred to guard horses and coaches, and some of the old protective instinct remains. Reserved and dignified, Dals can be aloof with strangers and are dependable watchdogs. With their preferred humans, Dals are bright, loyal, and loving house dogs. They are strong, active athletes with great stamina and a wonderful partner for runners and hikers.</p>
+         </div>
+         <div class="breed">
+           <img src="images/pitbull.jpeg" alt="" class="thumbnail">
+           <h3 class="name">Pit Bull Terrier</h3>
+           <p class="description">The American Pit Bull Terrier is a companion and family dog breed. Originally bred to “bait” bulls, the breed evolved into all-around farm dogs, and later moved into the house to become “nanny dogs” because they were so gentle around children. Their tenacity, gameness, and courage make them popular competitors in the sports of weight pulling, agility, and obedience. Of course, you can also find them living as companions, showering their humans with love and affection.</p>
+         </div>
+       </div>
+          <aside>
+            
+          </aside>
+          <!-- scroll to top button -->
+        <div><button onclick="topFunction()" id="cornerbtn" title="Go to top">Return To Top</button></div>
+
+        <script>
+            // When the user scrolls down 800px from the top of the document, show the button
+             window.onscroll = function() {scrollFunction()};
+         
+             function scrollFunction() {
+               if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+                 document.getElementById("cornerbtn").style.display = "block";
+               } else {
+                 document.getElementById("cornerbtn").style.display = "none";
+               }
+             }
+         
+             // When the user clicks on the button, scroll to the top of the document
+             function topFunction() {
+               document.body.scrollTop = 0;
+               document.documentElement.scrollTop = 0;
+             }
+         </script>
+
+    </main>
+    <!-- gets current year -->
+    <script>
+        window.onload = function() {
+            var d = new Date();
+            document.getElementById("copyright").innerHTML = d.getFullYear();
+        }
+    </script>
+    <footer>
+        <p>&copy; <span id="copyright"></span> Samantha Sutton Productions</p>
+    </footer>
+<!-- bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+</html>

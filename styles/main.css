@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+nav{
+    font-size: 110%;
+}
+html{
+    background-attachment: fixed;
+    background-image: url(../images/backgroundimg.jpeg);
+}
+body{
+    background-color: cornflowerblue;
+    font-family: 'Playfair Display', serif;
+}
+header{
+    background-image: url(../images/backgroundimg.jpeg);
+    padding: 30px 0;
+    /*background-image: linear-gradient(to right, cornflowerblue , tan);*/
+}
+header h2{
+    color:darksalmon;
+    font-size: 250%;
+    margin-top: 45px;
+    text-shadow: 4px  1px black;
+    text-shadow: 1px 1px 1px rgb(43, 40, 40), -3px -3px 3px rgb(32, 31, 31), -1px 1px 1px black, 1px -1px 1px black;
+}
+/* logo paw */
+#logoimg{
+    max-width: 100px;
+    width: 100%;
+    float: left;
+    border: 1px;
+    margin-left: 1em;
+    margin-top: 1em;
+    padding: .5em;
+}
+/* text box formatting to the left of img */
+.home{
+    background-color: rgba(0,0,0,.6);
+    width: 75%;
+    color: white;
+    float: left;
+    margin: 2em;
+    padding: 1em;
+    width: 50%;
+    border: 7px double lightgray;
+    border-radius: 10px;
+    margin-top: 5em;
+}
+/* image to the right of text */
+.homeimg{
+    margin: 1.2em;
+    border-radius: 10px;
+    float: right;
+    width: 40%;
+    max-height: 600px;
+} 
+/* return to top button */
+#cornerbtn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    left: 5px;
+    bottom: 150px;
+    z-index: 99; /* Make sure it does not overlap */
+    border: 1px solid black;
+    outline: none; /* Remove outline */
+    font-weight: bold;
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: .5em .5em;
+    margin: 0 1em 3px 0;
+    font-size: 100%;
+    border-radius: 5px;
+    background-color: rgba(0,0,0,.6);
+    color: white;
+    transition: all .5s;
+ }
+ #cornerbtn:hover {
+    background-color: rgba(0,0,0,1);
+    color: lightcyan;
+    border: 1px solid lightcyan;
+ }
+ /* countdown formatting */
+.container{
+    margin-left: 0;
+    text-align: center;
+}
+
+ 
+footer{
+    clear: both;
+    background-image: url(../images/backgroundimg.jpeg);
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: powderblue;
+    padding: 15px 0;
+    border-top: 3px solid silver;
+    /*background-image: linear-gradient(to right, pink , lightcyan);*/
+}
+footer p{
+    text-align: center;
+    font-size: 90%;
+    color:darksalmon;
+    text-shadow: 4px  1px black;
+    text-shadow: 1px 1px 1px rgb(43, 40, 40), -3px -3px 3px rgb(32, 31, 31), -1px 1px 1px black, 1px -1px 1px black;
+}
+/* responsive to make everything one column with no outlines*/
+@media only screen and (max-width: 800px) {
+    header{
+        text-align: center;
+    }
+    #logoimg{
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+    section{
+        float: none;
+        width: 100%;
+        margin-top: 0;
+    }
+    article{
+        margin: 0;
+        width: 100%;
+    }
+    aside{
+        float: none;
+        margin: 0;
+    }
+    .home{
+        clear: both;
+        margin: 0;
+        border: none;
+        width: 100%;
+        border-radius: 0;
+    }
+    .homeimg{
+        margin: 0;
+        border-radius: 0;
+        width: 100%;
+        max-width: none;
+        max-height: 750px;
+    }
+  }
+  /* fix margins so photo doesn't go below text with float */
+  @media only screen and (max-width: 1030px) {
+    .home{
+       margin-right: 0;
+    }
+    /* put countdown below text and photo so it doesn't float under  */
+    .container{
+        clear: both;
+        margin: 0 auto;
+    }
+  }

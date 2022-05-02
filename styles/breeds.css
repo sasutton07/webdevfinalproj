@@ -1,0 +1,54 @@
+h1{
+    font-size: 300%;
+    margin: 10px;
+    color: rgb(46, 37, 37);
+    text-align: center;
+    text-shadow: 1px 1px 1px peachpuff, -3px -3px 3px peachpuff, -1px 1px 1px peachpuff, 1px -1px 1px peachpuff;
+}
+/* all the breed boxes */
+.breeds{
+    flex: 1 1 70vw;
+}
+/* each individual breed box's contents */
+.breed{
+    background-color:rgb(162, 132, 165);
+    display: grid;
+    margin: 1em;
+    grid-template-columns: 20% 80%;
+    grid-template-areas: 
+    'thumbnail name'
+    'thumbnail description';
+    align-items: center;
+    border: 5px double dimgray;
+    padding: .5em;
+    border-radius: 10px;
+}
+/* images in each box */
+.thumbnail {
+    max-width: 150px;
+    width: 100%;
+    grid-area: thumbnail;
+    align-self: center;
+    justify-self: center;
+    border: 5px double rgb(93, 89, 89);
+    border-radius: 10px;
+    box-shadow: 3px 3px 15px 3px gray;
+}
+/* puts images on top of descriptions so they dont get too small and disproportionate */
+@media only screen and (max-width: 800px) {
+    .thumbnail{
+        grid-area: 
+        'thumbnail'
+        'name'
+        'description';
+        width: 100%;
+    }
+    .breed{
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        'thumbnail'
+        'name'
+        'description';
+    }
+}
+

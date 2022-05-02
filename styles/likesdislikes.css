@@ -1,0 +1,112 @@
+/* keeps likes container on left*/
+.likes{
+    float: left;
+}
+/* aligns ul to left of container */
+.listItems{
+    float: left;
+    width: 50%;
+}
+/* aligns image to right of container next to ul */
+.image1{
+    width: 45%; 
+    float: right;
+    margin-left: 0;
+}
+/* likes and dislikes title text */
+.likes h2, .dislikes h2{
+    text-align: center;
+    text-decoration: underline;
+    font-size: 250%;
+    margin: 10px;
+    color: wheat;
+    text-align: center;
+    text-shadow: 1px 1px 1px cornflowerblue, -2px -2px 2px cornflowerblue, -1px 1px 1px cornflowerblue, 1px -1px 1px cornflowerblue;
+}
+/* background containers of each likes and dislikes box */
+.likes, .dislikes{
+    width: 45%;
+    background-color: rgb(197, 140, 119);
+    margin: 1em;
+    padding: .7em;
+    border: 7px double lightgray;
+    border-radius: 10px;
+}
+.dislikes{
+    float: right;
+}
+div img{
+    max-width: 200px;
+    float: right;
+    border-radius: 10px;
+    margin: .5em;
+    margin-left: 115px;
+}
+section ul li{
+    font-size: 120%;
+}
+/* responsiveness for phone screens so image and text don't overlap */
+/* puts image below ul */
+@media only screen and (max-width: 441px){
+    .likes, .dislikes{
+        float: none;
+        width: 100%;
+        margin: 0;
+        margin-top: 10px;
+        border: none;
+        border-radius: 0;
+        height: 38em;
+    }
+    .listItems{
+        float: none;
+        width: 100%;
+    }
+    .image1{
+        clear: right;
+        margin: 0 auto;
+        width: 100%;
+        margin-right: 5em;
+    }
+    img{
+        border-radius: 0;
+    }
+}
+/* respoinsiveness to put likes and dislikes into one column*/
+@media only screen and (min-width: 441px) and (max-width: 800px) {
+    .likes, .dislikes{
+        float: none;
+        width: 100%;
+        margin: 0;
+        margin-top: 10px;
+        border: none;
+        border-radius: 0;
+        height: 25em;
+    }
+    .listItems{
+        float: left;
+        width: 50%;
+    }
+    .image1{
+        margin: 0;
+        width: 50%;
+        float: right;
+    }
+    img{
+        margin: 0px;
+        border-radius: 0;
+    }
+    
+}
+/* resposiveness to put images below text when they start to overlap */
+/* still in two column layout */
+@media only screen and (min-width: 801px) and (max-width: 1030px){
+    .image1, .listItems{
+        float: none;
+    }
+    .listItems{
+        width: 100%;
+    }
+    .image1{
+        margin: 0 5em;
+    }
+}
